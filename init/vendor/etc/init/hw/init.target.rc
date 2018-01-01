@@ -268,6 +268,14 @@ service bt-mac-generator /system/vendor/bin/bt-mac-generator
     disabled
     seclabel u:r:bt_mac_generator:s0
 
+# DASH
+service dashd /sbin/dashd
+    class core
+    #critical
+    seclabel u:r:dashd:s0
+    group root system
+
+# Peripheral manager
 service per_mgr /vendor/bin/pm-service
     class core
     user system

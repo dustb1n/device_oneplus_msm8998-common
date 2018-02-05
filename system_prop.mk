@@ -119,7 +119,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
     persist.sys.force_sw_gles=0 \
     persist.sys.wfd.virtual=0 \
-    persist.hwc.enable_vds=1
+    persist.hwc.enable_vds=1 \
+    sdm.debug.disable_partial_split=1
+
+#IMS / VoLTE
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.volte_enabled_by_hw=1 \
+    persist.dbg.ims_volte_enable=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \

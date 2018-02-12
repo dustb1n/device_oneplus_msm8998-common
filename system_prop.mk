@@ -20,6 +20,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.dirac.acs.storeSettings=1 \
     ro.dirac.ignore_error=1
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    af.resampler.quality=7 \
+    vendor.audio.heap.size.multiplier=7 \
+    vendor.audio.offload.pstimeout.secs=3
+
 # Audio new
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio_hal.period_size=192 \
@@ -42,7 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.safx.pbe.enabled=true \
     vendor.audio.parser.ip.buffer.size=0 \
     vendor.audio.flac.sw.decoder.24bit=true \
-    persist.vendor.bt.a2dp_offload_cap=false \
+    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac \
     vendor.audio.use.sw.alac.decoder=true \
     vendor.audio.use.sw.ape.decoder=true \
     vendor.audio.hw.aac.encoder=true \
@@ -61,9 +66,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     qcom.bluetooth.soc=cherokee \
     ro.bluetooth.a4wp=false \
     ro.bluetooth.emb_wp_mode=true \
-    ro.bluetooth.wipower=true \
+    ro.bluetooth.wipower=true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.bt.a2dp.aac_disable=true \
     persist.bt.a2dp.aptx_disable=false \
     persist.bt.a2dp.aptx_hd_disable=false \
+    persist.bt.a2dp_offload_cap=sbc-aptx-aptxhd \
     persist.bt.enableAptXHD=true
 
 # Cabl
@@ -75,9 +84,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera,com.android.camera,org.lineageos.snap \
     persist.camera.mobicat=2 \
     persist.camera.stats.debugexif=3080192 \
-    persist.ts.rtmakeup=false \
-    persist.camera.HAL3.enabled=1 \
-    camera.hal1.packagelist=com.skype.raider
+    camera.hal1.packagelist=com.skype.raider,com.instagram.android,com.tencent.mm,com.whatsapp \
+    camera.disable_zsl_mode=0 \
+    persist.camera.zsl.mode=1 \
+    persist.camera.HAL3.enabled=1
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -141,12 +151,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.aac_51_output_enabled=true \
     mm.enable.smoothstreaming=true \
     persist.mm.enable.prefetch=true \
-    vidc.enc.dcvs.extra-buff-count=2
+    vidc.enc.dcvs.extra-buff-count=2 \
+    persist.media.treble_omx=true
 
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.nfc.port=I2C \
     persist.nfc.smartcard.config=SIM1,eSE1
+
+# OTG support
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.oem.otg_support=true
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -226,6 +241,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.dpc=true \
     ro.vendor.sensors.multishake=true
 
+# Tethering
+PRODUCT_PROPERTY_OVERRIDES += \
+net.tethering.noprovisioning=true
+
 # Timeservice
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
@@ -239,7 +258,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wi-Fi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
-
-# OTG support
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.sys.oem.otg_support=true

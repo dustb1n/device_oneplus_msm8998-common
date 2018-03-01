@@ -83,10 +83,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera,com.android.camera,org.lineageos.snap \
     persist.camera.mobicat=2 \
     persist.camera.stats.debugexif=3080192 \
-    camera.hal1.packagelist=com.skype.raider,com.instagram.android,com.tencent.mm,com.whatsapp \
-    camera.disable_zsl_mode=0 \
-    persist.camera.zsl.mode=1 \
-    #persist.camera.HAL3.enabled=1
+    persist.ts.rtmakeup=false
 
 # CNE
 PRODUCT_PROPERTY_OVERRIDES += \

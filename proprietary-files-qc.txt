@@ -646,6 +646,13 @@ vendor/lib/hw/vendor.qti.esepowermanager@1.0-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0_vendor.so
 vendor/lib64/hw/vendor.qti.esepowermanager@1.0-impl.so
 
+# Fingerprint sensor
+etc/permissions/com.fingerprints.extension.xml:vendor/etc/permissions/com.fingerprints.extension.xml
+framework/com.fingerprints.extension.jar:vendor/framework/com.fingerprints.extension.jar
+framework/vendor.qti.hardware.fingerprint-V1.0-java.jar:vendor/framework/vendor.qti.hardware.fingerprint-V1.0-java.jar
+vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8998.so
 vendor/lib64/hw/gatekeeper.msm8998.so
@@ -808,6 +815,8 @@ lib64/vendor.qti.hardware.improvetouch.blobmanager@1.0.so
 lib64/vendor.qti.hardware.improvetouch.gesturemanager@1.0.so
 vendor/etc/hbtp/hbtpcfg.dat
 vendor/etc/hbtp/hbtpcfg2.dat
+vendor/etc/hbtp/qtc800h.bin
+vendor/etc/hbtp/qtc800s_dsp.bin
 vendor/lib/libhbtpclient.so
 vendor/lib/libhbtpfrmwk.so
 vendor/lib/libhbtpdsp.so
